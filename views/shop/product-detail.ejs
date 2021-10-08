@@ -1,0 +1,26 @@
+<%- include('../includesProve/head.ejs') %>
+</head>
+<body>
+    <%- include('../includesProve/nav.ejs') %>
+    <main class="centered">
+        <h1>
+            <%= product.tittle %>
+        </h1>
+        <hr>
+        <div>
+            <img src="<%= product.image %>" alt="<%= product.tittle %>">
+        </div>
+        <h2>
+            <%= product.price %> 
+        </h2>
+        <p>
+            <%= product.description %>
+        </p>
+        <h5>
+            <%= product.rating %>
+        </h5>
+
+        <%- include('../includesProve/add-to-cart.ejs') %>
+        
+    </main>
+    <%- include('../includesProve/end.ejs') %>

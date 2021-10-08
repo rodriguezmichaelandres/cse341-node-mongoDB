@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/main.css" />
+
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-header_nav">
+            <ul class="main-header_item-list">
+                <li class="main-header_item"><a  href="/">Shop</a></li>
+                <li class="main-header_item"><a class="active" href="/admin/add-product">Add Product</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form class="product-form" action="/admin/add-product" method="POST">
+            <div class="form-control">
+                <label for="tittle">Tittle</label>
+                <input type="text" name="tittle" id="tittle" required>
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author" required>
+                <label for="price">Price</label>
+                <input type="text" name="price" id="price" required>
+                <label for="description">Description</label>
+                <input type="text" name="description" id="description" required>
+                <label for="rating">Rating</label>
+                <select name="rating" id="rating" required>
+                   <option value="★">★</option> 
+                   <option value="★★">★★</option> 
+                   <option value="★★★">★★★</option>
+                   <option value="★★★★">★★★★</option> 
+                   <option value="★★★★★">★★★★★</option> 
+                   
+                </select>
+            </div>
+            
+            <button type="submit">Add Product</button>
+        </form>
+    </main>
+</body>
+</html>

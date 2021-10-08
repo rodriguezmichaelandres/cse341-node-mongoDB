@@ -1,0 +1,27 @@
+extends layouts/main-layout.pug
+
+block styles
+
+block content
+    main 
+        if prods.length > 0
+            .grid
+                each product in prods
+                    article.card.product-item 
+                        header.card_header 
+                            h1.product_title Tittle: #{product.tittle}
+                            h3.author_name Author: #{product.author}
+                        .card_image 
+                            img(src="https://s1.eestatic.com/2019/07/01/como/libros-estudiantes-universidad_410470522_127023888_1024x576.jpg", alt="Book")
+                        .card_content 
+                            h2.product_price Price: #{product.price}
+                            p.product_description Description: #{product.description}
+                        .card_rating    
+                            p.prodict_rating Rating: #{product.rating}
+                        .card_actions   
+                            button.btn Add to cart
+                        br
+                        .remove 
+                            button.delete Delete
+        else
+            h1 No products yet

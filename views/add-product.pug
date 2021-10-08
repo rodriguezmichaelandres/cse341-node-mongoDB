@@ -1,0 +1,26 @@
+extends layouts/main-layout.pug
+    
+block styles
+    link(rel="stylesheet", href="/css/product.css")
+
+block content
+    main
+        form.product-form(action="/admin/add-product" method="POST")
+                .form-control
+                    label(for="tittle") Tittle
+                    input(type="text", name="tittle", required)#tittle
+                    label(for="author") Author
+                    input(type="text", name="author", required)#author
+                    label(for="price") Price
+                    input(type="text", name="price", required)#price 
+                    label(for="description") Description
+                    input(type="text"  name="description", required)#description
+                    label(for="rating") Rating
+                    select(name="rating", required)#rating
+                        option(value="*") * 
+                        option(value="**") **
+                        option(value="***") ***
+                        option(value="****") ****
+                        option(value="*****") ***** 
+                button(type="submit") Add Product
+

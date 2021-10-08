@@ -1,0 +1,37 @@
+<%- include('../includesProve/head.ejs') %>
+</head>
+<body>
+    <%- include('../includesProve/nav.ejs') %>
+
+    <main>
+        <% if (prods.length > 0) { %>
+            <div class="grid">
+                <% for (let product of prods) { %>
+                    <article class="card.product-item">
+                        <header class="card_header">
+                            <h1 class="product_tittle">Tittle: <%= product.tittle %></h1>
+                            <h3 class="author_name">Author: <%= product.author %></h3>
+                        </header>
+                        <div class="card_image">
+                            <img src="<%= product.image %>" alt="<%= product.tittle %>">
+                        </div>
+                        <div class="card_content">
+                            <h2 class="product_price">Price: $<%= product.price %></h2>
+                            <p class="product_description">Description: <%= product.description %></p>
+                        </div>
+                        <div class="card_rating">
+                            <p class="product_rating">Rating: <%= product.rating %></p>
+                        </div>
+                        <div class="card_actions">
+                            <a href="/products/<%= product._id %>" class="btn">Details</a>
+                            <%- include('../includesProve/add-to-cart.ejs', {product: product}) %>
+                            
+                        </div>
+                    </article>
+                <% } %>
+            </div>
+        <% } else { %>
+            <h1>No products yet!</h1>
+        <% } %>
+    </main>
+<%- include('../includesProve/end.ejs') %>

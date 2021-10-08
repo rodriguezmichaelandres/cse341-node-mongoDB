@@ -1,0 +1,43 @@
+
+.product-form{
+    max-width: 90%;
+    margin: auto;
+}
+
+.form-control {
+    margin: 1rem 0;
+}
+
+.form-control label,
+.form-control input,
+.form-control textarea{
+    display: block;
+    
+}
+
+.form-control input,
+.form-control textarea{
+    border: 1px solid dodgerblue;
+    font: inherit;
+    border-radius: 2px;
+}
+
+.form-control input:focus,
+.form-control textarea:input:focus{
+    outline-color: blue;
+}
+
+button{
+    font: inherit;
+    border: 1px solid royalblue;
+    color: royalblue;
+    background: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover,
+button:active{
+    background-color: slateblue;
+    color: snow;
+}
